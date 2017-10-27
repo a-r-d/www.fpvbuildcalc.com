@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
+import ProductGrid from './components/ProductGrid'
 
 class App extends Component {
   render() {
@@ -15,6 +16,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
           <RaisedButton>Test</RaisedButton>
         </p>
+        <div>
+          <ProductGrid />
+        </div>
       </div>
     );
   }
