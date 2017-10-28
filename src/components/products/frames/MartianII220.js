@@ -6,5 +6,6 @@ export default {
   },
   image: 'images/martian-ii-220.jpg',
   price: 25.00,
-  highp: 30.00
+  highp: 30.00,
+  notes: 'Essentially a very cheap Alien knockoff, but it is about a fifth of the price so nobody will fault you for buying it.'
 }
