@@ -39,6 +39,12 @@ Here are the videos that correspond to this videos
   - Part 8 branch link
   - Part 9 branch link
 
+## Shrinking images
+
+Images should be shrunk with imagemagick:
+```
+mogrify -resize 50% *.jpg
+```
 
 # Below this is generated from "Start React App"
 
