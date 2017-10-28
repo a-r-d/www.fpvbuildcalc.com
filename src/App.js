@@ -22,10 +22,14 @@ class App extends Component {
         </div>
         <div className="MainContentContainer">
           <div className="ProductsContainer">
-            <ProductGrid products={this.props.products} onProductSelect={this.props.onProductSelect} />
+            <ProductGrid
+              products={this.props.products}
+              onProductSelect={this.props.onProductSelect}
+              onProductDeselect={this.props.onProductDeselect}
+            />
           </div>
           <div className="ShoppingListContainer">
-            <ShoppingList products={this.props.products} onProductDeSelect={this.props.onProductDeSelect} />
+            <ShoppingList products={this.props.products} onProductDeselect={this.props.onProductDeselect} />
           </div>
         </div>
       </div>

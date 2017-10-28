@@ -5,6 +5,13 @@ import Checkbox from 'material-ui/Checkbox';
 import './index.css'
 
 const ProductTile = (props) => {
+
+  const thisProductChecked = () => {
+    return props.allProducts.findIndex((product) => {
+      return props.product.name === product.name
+    })
+  }
+
   return (
     <div className="ProductTile">
       <Paper zDepth={1}>
@@ -21,11 +28,13 @@ const ProductTile = (props) => {
             })
           }
         </div>
-
         <div className="ProductImageContainer">
           <div className="ProductCheckContainer">
-            <Checkbox onClick={() => {
-              // TODO: if product is selected already, remove it
+            <Checkbox checked={thisProductChecked() !== -1} onClick={() => {
+              const index = thisProductChecked()
+              if (index !== -1) {
+                return props.onProductDeselect(props.product)
+              }
               props.onProductSelect(props.product)
             }}/>
           </div>

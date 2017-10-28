@@ -14,9 +14,14 @@ function productsReducer(state, action) {
         products: [...state.products, action.product]
       })
     case types.PRODUCT_DESELECTED:
-      // array.splice(index, 1);
-      // TODO: actually remove the product here.
-      return state
+      const products = [...state.products]
+      const index = products.findIndex((product) => {
+        return product.name === action.product.name
+      })
+      products.splice(index, 1)
+      return Object.assign({}, state, {
+        products
+      })
     default:
       return state
   }

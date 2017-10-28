@@ -8,7 +8,13 @@ function productRenderer(products, props) {
   })
 
   return sorted.map((key, i) => {
-    return <ProductTile product={products[ key ]} key={i} onProductSelect={props.onProductSelect}/>
+    return <ProductTile
+      product={products[ key ]}
+      key={i}
+      allProducts={props.products}
+      onProductSelect={props.onProductSelect}
+      onProductDeselect={props.onProductDeselect}
+    />
   })
 }
 

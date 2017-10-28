@@ -23,10 +23,10 @@ const ShoppingList = (props) => {
         {
           props.products.length > 0 ?
           <Table multiSelectable={true} selectable={true}
-          onCellClick={(i, j) => {
-            console.log('On cell click', i, j)
-            if(j === -1) {
-              console.log("A checkbox was clicked for row", i);
+          onCellClick={(row, col) => {
+            if(col === -1) {
+              console.log("A checkbox was clicked for row", row, props);
+              props.onProductDeselect(props.products[ row ])
             }
           }}>
             <TableHeader displayRowCheckbox={true} displaySelectAll={false} enableSelectAll={false}>
