@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import productActions from './actions/products'
 
-import logo from './logo.svg';
-// import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 import ProductGrid from './components/ProductGrid'
 import ShoppingList from './components/ShoppingList'
@@ -13,8 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <img src="/images/cyclone.png" className="App-logo" alt="logo" />
+          <h1 className="App-title">FPV Build Calculator</h1>
         </header>
         <div>
           <p className="App-intro">

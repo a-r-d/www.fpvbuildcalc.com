@@ -9,3 +9,19 @@
   font-size: 1.5rem;
   margin: 0px;
 }
+
+.ShoppingList .TableComponent tr td:first-child {
+  padding: 5px !important;
+}
+
+.ShoppingList .TableComponent tr th:first-child {
+  padding: 5px !important;
+}
+
+.ShoppingList .TableComponent tr td {
+    height: 2em !important;
+}
+
+.ProductTableFooter tr td {
+  color: #333;
+}

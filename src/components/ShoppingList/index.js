@@ -23,6 +23,8 @@ const ShoppingList = (props) => {
         {
           props.products.length > 0 ?
           <Table multiSelectable={true} selectable={true}
+          style={{tableLayout: 'auto'}}
+          className="TableComponent"
           onCellClick={(row, col) => {
             if(col === -1) {
               console.log("A checkbox was clicked for row", row, props);
@@ -31,8 +33,8 @@ const ShoppingList = (props) => {
           }}>
             <TableHeader displayRowCheckbox={true} displaySelectAll={false} enableSelectAll={false}>
               <TableRow>
-                <TableHeaderColumn>Product</TableHeaderColumn>
-                <TableHeaderColumn>Price</TableHeaderColumn>
+                <TableHeaderColumn style={{padding: '5px'}}>Product</TableHeaderColumn>
+                <TableHeaderColumn style={{padding: '5px', textAlign: 'right'}}>Price</TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={true}>
@@ -40,17 +42,17 @@ const ShoppingList = (props) => {
                 props.products.map((product, i) => {
                   return (
                     <TableRow selected={true} key={i}>
-                      <TableRowColumn>{ product.name }</TableRowColumn>
-                      <TableRowColumn>{ '$' + product.price.toFixed(2) }</TableRowColumn>
+                      <TableRowColumn  style={{padding: '5px', whiteSpace: 'wrap'}}>{ product.name }</TableRowColumn>
+                      <TableRowColumn  style={{padding: '5px', textAlign: 'right'}}>{ '$' + product.price.toFixed(2) }</TableRowColumn>
                     </TableRow>
                   )
                 })
               }
             </TableBody>
-            <TableFooter>
+            <TableFooter className="ProductTableFooter">
               <TableRow style={{fontWeight: 900, fontSize: '1.4rem'}}>
-                <TableRowColumn>Total:</TableRowColumn>
-                <TableRowColumn>
+                <TableRowColumn style={{padding: '5px', fontSize: '1.4rem' }}>Total:</TableRowColumn>
+                <TableRowColumn style={{padding: '5px', textAlign: 'right', fontSize: '1.4rem'}}>
                 {
                     ' $' + props.products.map((product, i) => {
                       return product.price

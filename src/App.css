@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 30s linear;
   height: 80px;
 }
 
@@ -16,6 +16,7 @@
 
 .App-title {
   font-size: 1.5em;
+  color: white;
 }
 
 .App-intro {
@@ -42,4 +43,8 @@
 .ShoppingListContainer {
   /*flex: 1 0 auto;*/
   width: 25%;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #333
 }
