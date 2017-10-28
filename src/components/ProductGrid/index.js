@@ -8,6 +8,7 @@ import Vtx from '../products/vtx'
 import Props from '../products/props'
 import Pdb from '../products/pdb'
 import Antenna from '../products/antenna'
+import Receiver from '../products/receiver'
 
 import productRenderer from '../lib/product-renderer'
 
@@ -41,16 +42,20 @@ const ProductGrid = (props) => {
         { productRenderer(Vtx, props) }
       </div>
       <div className='ProductGridColumn'>
-        <h2>Propellers</h2>
-        { productRenderer(Props, props) }
+        <h2>VTX Antenna</h2>
+        { productRenderer(Antenna, props) }
+      </div>
+      <div className='ProductGridColumn'>
+        <h2>Receiver</h2>
+        { productRenderer(Receiver, props) }
       </div>
       <div className='ProductGridColumn'>
         <h2>PDB</h2>
         { productRenderer(Pdb, props) }
       </div>
       <div className='ProductGridColumn'>
-        <h2>VTX Antenna</h2>
-        { productRenderer(Antenna, props) }
+        <h2>Propellers</h2>
+        { productRenderer(Props, props) }
       </div>
     </div>
   )
