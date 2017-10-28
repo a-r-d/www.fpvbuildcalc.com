@@ -1,3 +1,16 @@
+.ProductTile {
+  max-width: 14em;
+  margin-bottom: 0.5em;
+}
+
 .ProductTile .ProductImage {
-  max-width: 100px;
+  max-width: 4em;
+}
+
+.ProductPrice {
+  font-weight: 900;
+}
+
+.ProductLinkList span, .ProductLinkList a {
+  padding: 0.3em;
 }

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 // import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 import ProductGrid from './components/ProductGrid'
+import AccessoriesGrid from './components/AccessoriesGrid'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         </div>
         <div>
           <ProductGrid />
+          <AccessoriesGrid />
         </div>
       </div>
     );

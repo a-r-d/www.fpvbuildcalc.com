@@ -1,5 +1,5 @@
 export default {
-  name: 'Crazepony 4pcs EMAX RS2205-S 2300KV ',
+  name: 'EMAX RS2205-S 2300KV ',
   price: 69.99,
   image: 'images/crazepony-emax-2300.jpg',
   shop: {
