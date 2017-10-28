@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductTile from '../ProductTile'
 import Props from '../products/props'
 import Pdb from '../products/pdb'
 import Antenna from '../products/antenna'

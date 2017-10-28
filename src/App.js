@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import ProductGrid from './components/ProductGrid'
 import AccessoriesGrid from './components/AccessoriesGrid'
+import ShoppingList from './components/ShoppingList'
 
 class App extends Component {
   render() {
@@ -17,9 +18,14 @@ class App extends Component {
           <p className="App-intro">
           </p>
         </div>
-        <div>
-          <ProductGrid />
-          <AccessoriesGrid />
+        <div className="MainContentContainer">
+          <div className="ProductsContainer">
+            <ProductGrid />
+            <AccessoriesGrid />
+          </div>
+          <div className="ShoppingListContainer">
+            <ShoppingList />
+          </div>
         </div>
       </div>
     );

@@ -5,6 +5,7 @@
 
 .ProductTile .ProductImage {
   max-width: 4em;
+  max-height: 4em;
 }
 
 .ProductPrice {
@@ -13,4 +14,21 @@
 
 .ProductLinkList span, .ProductLinkList a {
   padding: 0.3em;
+}
+
+.ProductImageContainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.ProductCheckContainer {
+  flex: 0.5 0 auto;
+}
+
+.ProductCheckContainer input {
+  flex: 1 0 auto;
+  width: 2em;
+  height: 2em;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper'
+import Checkbox from 'material-ui/Checkbox';
+
 import './index.css'
 
 const ProductTile = (props) => {
@@ -18,10 +20,15 @@ const ProductTile = (props) => {
           }
         </div>
 
-        <img className='ProductImage'
-          src={ props.product.image }
-          alt={props.product.name}
-        />
+        <div className="ProductImageContainer">
+          <div className="ProductCheckContainer">
+            <Checkbox/>
+          </div>
+          <img className='ProductImage'
+            src={ props.product.image }
+            alt={props.product.name}
+          />
+        </div>
       </Paper>
     </div>
   )

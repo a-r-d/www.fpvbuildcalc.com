@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductTile from '../ProductTile'
 import Frames from '../products/frames'
 import FCs from '../products/fcs'
 import Motors from '../products/motors'
