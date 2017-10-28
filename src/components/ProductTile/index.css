@@ -14,6 +14,8 @@
 
 .ProductLinkList span, .ProductLinkList a {
   padding: 0.3em;
+  color: #5697ff;
+  font-style: italic;
 }
 
 .ProductImageContainer {

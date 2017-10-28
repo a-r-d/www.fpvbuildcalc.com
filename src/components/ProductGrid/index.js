@@ -5,6 +5,9 @@ import Motors from '../products/motors'
 import Esc from '../products/esc'
 import Cams from '../products/camera'
 import Vtx from '../products/vtx'
+import Props from '../products/props'
+import Pdb from '../products/pdb'
+import Antenna from '../products/antenna'
 
 import productRenderer from '../lib/product-renderer'
 
@@ -37,7 +40,18 @@ const ProductGrid = (props) => {
         <h2>Video Transmitter</h2>
         { productRenderer(Vtx, props) }
       </div>
-
+      <div className='ProductGridColumn'>
+        <h2>Propellers</h2>
+        { productRenderer(Props, props) }
+      </div>
+      <div className='ProductGridColumn'>
+        <h2>PDB</h2>
+        { productRenderer(Pdb, props) }
+      </div>
+      <div className='ProductGridColumn'>
+        <h2>VTX Antenna</h2>
+        { productRenderer(Antenna, props) }
+      </div>
     </div>
   )
 }

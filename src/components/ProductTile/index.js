@@ -15,7 +15,7 @@ const ProductTile = (props) => {
           <span className='ProductPrice'>${ props.product.price.toFixed(2) }</span>
           {
             Object.keys(props.product.shop).map((key, i) => {
-              return <a className="ProductLink" href={props.product.shop[ key ]} target="_blank">{key}</a>
+              return <a key={i} className="ProductLink" href={props.product.shop[ key ]} target="_blank">{key}</a>
             })
           }
         </div>
@@ -23,7 +23,7 @@ const ProductTile = (props) => {
         <div className="ProductImageContainer">
           <div className="ProductCheckContainer">
             <Checkbox onClick={() => {
-              console.log('Product clicked', props.product);
+              // TODO: if product is selected already, remove it
               props.onProductSelect(props.product)
             }}/>
           </div>

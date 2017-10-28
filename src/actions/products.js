@@ -1,7 +1,6 @@
 import types from './types'
 
 function productSelected(product) {
-  console.log('Product selected action', product)
   return {
     type: types.PRODUCT_SELECTED,
     product: product

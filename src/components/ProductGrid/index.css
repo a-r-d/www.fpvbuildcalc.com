@@ -3,6 +3,8 @@
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
 .ProductGridColumn {
@@ -11,4 +13,5 @@
   -webkit-flex-direction: column;
   flex-direction: column;
   margin: 0.5em;
+  flex-wrap: wrap;
 }

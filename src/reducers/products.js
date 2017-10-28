@@ -8,7 +8,6 @@ function productsReducer(state, action) {
   if(typeof state === 'undefined') {
     return Object.assign({}, initialState)
   }
-  console.log('Got reducer call', state, action)
   switch (action.type) {
     case types.PRODUCT_SELECTED:
       return Object.assign({}, state, {

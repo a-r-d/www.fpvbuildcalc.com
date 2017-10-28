@@ -35,9 +35,11 @@
 }
 
 .ProductsContainer {
-  flex: 3 0 auto;
+  /*flex: 3 0 auto;*/
+  width: 75%;
 }
 
 .ShoppingListContainer {
-  /* flex: 1 0 auto; */
+  /*flex: 1 0 auto;*/
+  width: 25%;
 }

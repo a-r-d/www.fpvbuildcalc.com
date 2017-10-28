@@ -10,33 +10,36 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-import Frames from '../products/frames'
-
 import './index.css'
 
 const ShoppingList = (props) => {
-  console.log('Shopping list props', props)
   return (
     <div className="ShoppingList">
       <Card>
-        <CardHeader
-          title="Your Shopping List"
-        />
+        <CardHeader className="ShoppingListHeader">
+            <h3>Shopping List</h3>
+          </CardHeader>
         <CardText>
         {
           props.products.length > 0 ?
-          <Table multiSelectable={false} selectable={false}>
-            <TableHeader displayRowCheckbox={false} displaySelectAll={false} enableSelectAll={false}>
+          <Table multiSelectable={true} selectable={true}
+          onCellClick={(i, j) => {
+            console.log('On cell click', i, j)
+            if(j === -1) {
+              console.log("A checkbox was clicked for row", i);
+            }
+          }}>
+            <TableHeader displayRowCheckbox={true} displaySelectAll={false} enableSelectAll={false}>
               <TableRow>
                 <TableHeaderColumn>Product</TableHeaderColumn>
                 <TableHeaderColumn>Price</TableHeaderColumn>
               </TableRow>
             </TableHeader>
-            <TableBody displayRowCheckbox={false}>
+            <TableBody displayRowCheckbox={true}>
               {
                 props.products.map((product, i) => {
                   return (
-                    <TableRow key={i}>
+                    <TableRow selected={true} key={i}>
                       <TableRowColumn>{ product.name }</TableRowColumn>
                       <TableRowColumn>{ '$' + product.price.toFixed(2) }</TableRowColumn>
                     </TableRow>
@@ -45,7 +48,7 @@ const ShoppingList = (props) => {
               }
             </TableBody>
             <TableFooter>
-              <TableRow>
+              <TableRow style={{fontWeight: 900, fontSize: '1.4rem'}}>
                 <TableRowColumn>Total:</TableRowColumn>
                 <TableRowColumn>
                 {

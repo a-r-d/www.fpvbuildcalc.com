@@ -6,15 +6,9 @@ import logo from './logo.svg';
 // import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 import ProductGrid from './components/ProductGrid'
-import AccessoriesGrid from './components/AccessoriesGrid'
 import ShoppingList from './components/ShoppingList'
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div className="App">
@@ -29,7 +23,6 @@ class App extends Component {
         <div className="MainContentContainer">
           <div className="ProductsContainer">
             <ProductGrid products={this.props.products} onProductSelect={this.props.onProductSelect} />
-            <AccessoriesGrid products={this.props.products} onProductSelect={this.props.onProductSelect} />
           </div>
           <div className="ShoppingListContainer">
             <ShoppingList products={this.props.products} onProductDeSelect={this.props.onProductDeSelect} />
