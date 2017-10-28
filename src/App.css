@@ -9,9 +9,15 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 6em;
+  padding: 1em;
   color: white;
+}
+
+.App-Header a, .HeaderLink {
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
 
 .App-title {
@@ -26,23 +32,6 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-.MainContentContainer {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-}
-
-.ProductsContainer {
-  /*flex: 3 0 auto;*/
-  width: 75%;
-}
-
-.ShoppingListContainer {
-  /*flex: 1 0 auto;*/
-  width: 25%;
 }
 
 h1, h2, h3, h4, h5 {

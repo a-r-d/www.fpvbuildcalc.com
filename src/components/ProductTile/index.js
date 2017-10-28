@@ -2,6 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper'
 import Checkbox from 'material-ui/Checkbox';
 import Dialog from 'material-ui/Dialog';
+// import Chip from 'material-ui/Chip';
 
 import './index.css'
 

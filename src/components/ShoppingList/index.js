@@ -11,12 +11,27 @@ import {
 } from 'material-ui/Table';
 import ReactTooltip from 'react-tooltip'
 import FontIcon from 'material-ui/FontIcon';
+import Paper from 'material-ui/Paper';
+
 
 import './index.css'
 
 const ShoppingList = (props) => {
   return (
     <div className="ShoppingList">
+      <div>
+        <Paper zDepth={1} style={{padding: '1em'}}>
+          <p>
+            FPV Build Calculator is here to help estimate your next build.
+            Simply check the boxes of the components you want to add and they will
+            be recorded and added up below.
+          </p>
+          <p >
+            All of the components listed are geared toward miniquad racing and
+            freestyle, none of the frames are larger than 250mm or smaller than 200mm
+          </p>
+        </Paper>
+      </div>
       <Card>
         <CardHeader className="ShoppingListHeader" style={{paddingBottom: '0px'}}>
             <h3>Shopping List</h3>
