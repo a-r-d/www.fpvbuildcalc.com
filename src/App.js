@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import RaisedButton from 'material-ui/RaisedButton';
+// import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 import ProductGrid from './components/ProductGrid'
 
@@ -14,12 +14,9 @@ class App extends Component {
         </header>
         <div>
           <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
           </p>
         </div>
         <div>
-          <RaisedButton>Test</RaisedButton>
-
           <ProductGrid />
         </div>
       </div>
