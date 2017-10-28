@@ -12,6 +12,11 @@
   max-height: 4em;
 }
 
+.ProductTile .ProductImageLarge {
+  max-width: 8em;
+  max-height: 8em;
+}
+
 .ProductPrice {
   font-weight: 900;
 }

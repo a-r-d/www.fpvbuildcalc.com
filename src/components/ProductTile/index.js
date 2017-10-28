@@ -1,51 +1,88 @@
 import React from 'react';
 import Paper from 'material-ui/Paper'
 import Checkbox from 'material-ui/Checkbox';
+import Dialog from 'material-ui/Dialog';
 
 import './index.css'
 
-const ProductTile = (props) => {
+class ProductTile extends React.Component{
 
-  const thisProductChecked = () => {
-    return props.allProducts.findIndex((product) => {
-      return props.product.name === product.name
+  state = {
+    open: false,
+  };
+
+  handleOpen = () => {
+    this.setState({open: true});
+  };
+
+  handleClose = () => {
+    this.setState({open: false});
+  };
+
+  thisProductChecked = () => {
+    return this.props.allProducts.findIndex((product) => {
+      return this.props.product.name === product.name
     })
   }
 
-  return (
-    <div className="ProductTile">
-      <Paper zDepth={1}>
-        <div>
-          <span className='ProductName'>{ props.product.name }</span>
-        </div>
-        <div className="ProductLinkList">
-          <span className='ProductPrice'>${ props.product.price.toFixed(2) }</span>
-          {
-            Object.keys(props.product.shop).map((key, i) => {
-              let url = props.product.shop[ key ]
-              if(String(key) === 'banggood') url += '?p=H101138294533201701A'
-              return <a key={i} className="ProductLink" href={url} target="_blank">{key}</a>
-            })
-          }
-        </div>
-        <div className="ProductImageContainer">
-          <div className="ProductCheckContainer">
-            <Checkbox checked={thisProductChecked() !== -1} onClick={() => {
-              const index = thisProductChecked()
-              if (index !== -1) {
-                return props.onProductDeselect(props.product)
-              }
-              props.onProductSelect(props.product)
-            }}/>
+  renderProductLinks = () => {
+    return Object.keys(this.props.product.shop).map((key, i) => {
+      let url = this.props.product.shop[ key ]
+      if(String(key) === 'banggood') url += '?p=H101138294533201701A'
+      return <a key={i} className="ProductLink" href={url} target="_blank">{key}</a>
+    })
+  }
+
+  render = () => {
+    return (
+      <div className="ProductTile">
+        <Paper zDepth={1}>
+          <div>
+            <span className='ProductName'>{ this.props.product.name }</span>
           </div>
-          <img className='ProductImage'
-            src={ props.product.image }
-            alt={props.product.name}
-          />
-        </div>
-      </Paper>
-    </div>
-  )
+          <div className="ProductLinkList">
+            <span className='ProductPrice'>${ this.props.product.price.toFixed(2) }</span>
+            {
+              this.renderProductLinks()
+            }
+          </div>
+          <div className="ProductImageContainer">
+            <div className="ProductCheckContainer">
+              <Checkbox checked={this.thisProductChecked() !== -1} onClick={() => {
+                const index = this.thisProductChecked()
+                if (index !== -1) {
+                  return this.props.onProductDeselect(this.props.product)
+                }
+                this.props.onProductSelect(this.props.product)
+              }}/>
+            </div>
+            <a onClick={this.handleOpen} style={{ cursor: 'pointer'}}>
+              <img className='ProductImage'
+                src={this.props.product.image}
+                alt={this.props.product.name}
+              />
+            </a>
+            <Dialog
+              title={ this.props.product.name }
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+            >
+              <p>{ this.props.product.notes }</p>
+              <img className='ProductImageLarge'
+                src={this.props.product.image}
+                alt={this.props.product.name}
+              />
+              <h3>Shopping Links</h3>
+              {
+                this.renderProductLinks()
+              }
+            </Dialog>
+          </div>
+        </Paper>
+      </div>
+    )
+  }
 }
 
 export default ProductTile;
