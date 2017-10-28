@@ -16,7 +16,7 @@ const ShoppingList = (props) => {
   return (
     <div className="ShoppingList">
       <Card>
-        <CardHeader className="ShoppingListHeader">
+        <CardHeader className="ShoppingListHeader" style={{paddingBottom: '0px'}}>
             <h3>Shopping List</h3>
           </CardHeader>
         <CardText>
@@ -37,7 +37,7 @@ const ShoppingList = (props) => {
                 <TableHeaderColumn style={{padding: '5px', textAlign: 'right'}}>Price</TableHeaderColumn>
               </TableRow>
             </TableHeader>
-            <TableBody displayRowCheckbox={true}>
+            <TableBody displayRowCheckbox={true} deselectOnClickaway={false}>
               {
                 props.products.map((product, i) => {
                   return (
