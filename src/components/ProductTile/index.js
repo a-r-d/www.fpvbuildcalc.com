@@ -25,11 +25,17 @@ class ProductTile extends React.Component{
     })
   }
 
-  renderProductLinks = () => {
+  getProductLinks = () => {
     return Object.keys(this.props.product.shop).map((key, i) => {
       let url = this.props.product.shop[ key ]
       if(String(key) === 'banggood') url += '?p=H101138294533201701A'
-      return <a key={i} className="ProductLink" href={url} target="_blank">{key}</a>
+      return { name: key, url }
+    })
+  }
+
+  renderProductLinks = () => {
+    return this.getProductLinks().map((link, i) => {
+      return <a key={i} className="ProductLink" href={link.url} target="_blank">{link.name}</a>
     })
   }
 
@@ -69,10 +75,14 @@ class ProductTile extends React.Component{
               onRequestClose={this.handleClose}
             >
               <p>{ this.props.product.notes }</p>
-              <img className='ProductImageLarge'
-                src={this.props.product.image}
-                alt={this.props.product.name}
-              />
+              <div className="CenterImage">
+                <a href={this.getProductLinks()[0].url} target="_blank" className="ProductLink">
+                  <img className='ProductImageLarge'
+                    src={this.props.product.image}
+                    alt={this.props.product.name}
+                  />
+                </a>
+              </div>
               <h3>Shopping Links</h3>
               {
                 this.renderProductLinks()

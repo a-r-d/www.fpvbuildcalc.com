@@ -9,6 +9,8 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+import ReactTooltip from 'react-tooltip'
+import FontIcon from 'material-ui/FontIcon';
 
 import './index.css'
 
@@ -51,7 +53,15 @@ const ShoppingList = (props) => {
             </TableBody>
             <TableFooter className="ProductTableFooter">
               <TableRow style={{fontWeight: 900, fontSize: '1.4rem'}}>
-                <TableRowColumn style={{padding: '5px', fontSize: '1.4rem' }}>Total:</TableRowColumn>
+                <TableRowColumn style={{padding: '5px', fontSize: '1.4rem' }}>
+                  <FontIcon data-tip data-for="EstimateTotalTooltip" className="material-icons" style={{color: '#999', fontSize: '0.7em'}}>help</FontIcon>
+                  Est. Total:
+                  <ReactTooltip id="EstimateTotalTooltip" type="dark" effect="solid" >
+                    <p>
+                      These prices are not guaranteed to be up to date, but they should be pretty close
+                    </p>
+                  </ReactTooltip>
+                </TableRowColumn>
                 <TableRowColumn style={{padding: '5px', textAlign: 'right', fontSize: '1.4rem'}}>
                 {
                     ' $' + props.products.map((product, i) => {
@@ -71,6 +81,7 @@ const ShoppingList = (props) => {
 
         </CardActions>
       </Card>
+
     </div>
   )
 }
