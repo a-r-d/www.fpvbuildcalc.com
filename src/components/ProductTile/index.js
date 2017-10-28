@@ -6,7 +6,7 @@ import './index.css'
 
 const ProductTile = (props) => {
   return (
-    <div className="ProductTile" onClick={() => console.log('product Clicked', props.product)}>
+    <div className="ProductTile">
       <Paper zDepth={1}>
         <div>
           <span className='ProductName'>{ props.product.name }</span>
@@ -22,7 +22,10 @@ const ProductTile = (props) => {
 
         <div className="ProductImageContainer">
           <div className="ProductCheckContainer">
-            <Checkbox/>
+            <Checkbox onClick={() => {
+              console.log('Product clicked', props.product);
+              props.onProductSelect(props.product)
+            }}/>
           </div>
           <img className='ProductImage'
             src={ props.product.image }

@@ -15,6 +15,7 @@ import Frames from '../products/frames'
 import './index.css'
 
 const ShoppingList = (props) => {
+  console.log('Shopping list props', props)
   return (
     <div className="ShoppingList">
       <Card>
@@ -22,7 +23,9 @@ const ShoppingList = (props) => {
           title="Your Shopping List"
         />
         <CardText>
-        <Table multiSelectable={false} selectable={false}>
+        {
+          props.products.length > 0 ?
+          <Table multiSelectable={false} selectable={false}>
             <TableHeader displayRowCheckbox={false} displaySelectAll={false} enableSelectAll={false}>
               <TableRow>
                 <TableHeaderColumn>Product</TableHeaderColumn>
@@ -31,11 +34,11 @@ const ShoppingList = (props) => {
             </TableHeader>
             <TableBody displayRowCheckbox={false}>
               {
-                Object.keys(Frames).map((key, i) => {
+                props.products.map((product, i) => {
                   return (
                     <TableRow key={i}>
-                      <TableRowColumn>{ Frames[ key ].name }</TableRowColumn>
-                      <TableRowColumn>{ '$' + Frames[ key ].price.toFixed(2) }</TableRowColumn>
+                      <TableRowColumn>{ product.name }</TableRowColumn>
+                      <TableRowColumn>{ '$' + product.price.toFixed(2) }</TableRowColumn>
                     </TableRow>
                   )
                 })
@@ -46,8 +49,8 @@ const ShoppingList = (props) => {
                 <TableRowColumn>Total:</TableRowColumn>
                 <TableRowColumn>
                 {
-                    ' $' + Object.keys(Frames).map((key, i) => {
-                      return Frames[ key ].price
+                    ' $' + props.products.map((product, i) => {
+                      return product.price
                     }).reduce((a, b) => {
                       return a + b
                     }).toFixed(2)
@@ -56,6 +59,8 @@ const ShoppingList = (props) => {
               </TableRow>
             </TableFooter>
           </Table>
+          : <div>No products Selected</div>
+        }
         </CardText>
         <CardActions>
 

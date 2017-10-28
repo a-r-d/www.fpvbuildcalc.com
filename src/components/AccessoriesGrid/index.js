@@ -8,20 +8,20 @@ import productRenderer from '../lib/product-renderer'
 
 import './index.css'
 
-const AccessoriesGrid = () => {
+const AccessoriesGrid = (props) => {
   return (
     <div className='AccProductGrid'>
       <div className='AccProductGridColumn'>
         <h2>Propellers</h2>
-        { productRenderer(Props) }
+        { productRenderer(Props, props) }
       </div>
       <div className='ProductGridColumn'>
         <h2>PDB</h2>
-        { productRenderer(Pdb) }
+        { productRenderer(Pdb, props) }
       </div>
       <div className='ProductGridColumn'>
         <h2>VTX Antenna</h2>
-        { productRenderer(Antenna) }
+        { productRenderer(Antenna, props) }
       </div>
     </div>
   )

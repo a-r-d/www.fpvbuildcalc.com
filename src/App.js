@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import productActions from './actions/products'
+
 import logo from './logo.svg';
 // import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
@@ -7,6 +10,11 @@ import AccessoriesGrid from './components/AccessoriesGrid'
 import ShoppingList from './components/ShoppingList'
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,11 +28,11 @@ class App extends Component {
         </div>
         <div className="MainContentContainer">
           <div className="ProductsContainer">
-            <ProductGrid />
-            <AccessoriesGrid />
+            <ProductGrid products={this.props.products} onProductSelect={this.props.onProductSelect} />
+            <AccessoriesGrid products={this.props.products} onProductSelect={this.props.onProductSelect} />
           </div>
           <div className="ShoppingListContainer">
-            <ShoppingList />
+            <ShoppingList products={this.props.products} onProductDeSelect={this.props.onProductDeSelect} />
           </div>
         </div>
       </div>
@@ -32,4 +40,21 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    products: state.products.products
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onProductSelect: (product) => {
+      dispatch(productActions.productSelected(product))
+    },
+    onProductDeselect: (product) => {
+      dispatch(productActions.productDeSelected(product))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
