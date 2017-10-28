@@ -6,5 +6,5 @@ export default {
   shop: {
     amazon: 'http://amzn.to/2iFMuor'
   },
-  notes: `Widely regarded as good for freestyle. Plastic is not especially durable.`
+  notes: `Widely regarded as good for freestyle. Plastic is not especially stiff, and pretty flexible.`
 }

@@ -6,5 +6,5 @@ export default {
   shop: {
     amazon: 'http://amzn.to/2yS66cL'
   },
-  notes: `Extremely durable props that handles really well. You typically crash many times before changing these out.`
+  notes: `Extremely durable props that handles really well. You typically crash many times before changing these out. Extremely stiff plastic, low flex.`
 }
