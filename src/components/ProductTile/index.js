@@ -15,7 +15,9 @@ const ProductTile = (props) => {
           <span className='ProductPrice'>${ props.product.price.toFixed(2) }</span>
           {
             Object.keys(props.product.shop).map((key, i) => {
-              return <a key={i} className="ProductLink" href={props.product.shop[ key ]} target="_blank">{key}</a>
+              let url = props.product.shop[ key ]
+              if(String(key) === 'banggood') url += '?p=H101138294533201701A'
+              return <a key={i} className="ProductLink" href={url} target="_blank">{key}</a>
             })
           }
         </div>

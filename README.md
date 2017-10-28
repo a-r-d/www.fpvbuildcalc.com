@@ -1,15 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# FPV Build Calculator
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This project was created (mostly) during screen recording the accompanying videos on Youtube. I have open-sourced
+this project to go along with the videos. I hope that this project is helpful for people wanting to learn how
+to use React and Redux in a gradual and more entertaining way.
 
-## banggood
+## Making changes
 
-Affiliate code is like:
-https://www.banggood.com/Eachine-E010-Mini-2_4G-4CH-6-Axis-Headless-Mode-RC-Quadcopter-RTF-p-1066972.html?p=H101138294533201701A
+This site is deployed at [www.fpvbuildcalc.com](http://www.fpvbuildcalc.com), if you think I made a mistake somewhere or would like to modify something,
+please feel free to make a pull request to update product information or anything. I will happily accept pull requests.
+
+## videos
+
+Here are the videos that correspond to this videos
+
+ - Part 1: Project setup
+ - Part 2: Building basic components
+ - Part 3: Flexbox and component rendering
+ - Part 4: Adding the shopping list component
+ - Part 5: Adding Redux Actions and Reducers
+ - Part 6: Adding Redux Store and wiring the connected component
+ - Part 7: Adding another Redux action to remove shopping list items
+ - Part 8: Adding detail view to products
+ - Part 9: Breaking out the app into pages.
+ - Part 10: Analytics, Discuss, and other third party integrations
+ - Part 11: Deploying the code.
+ - Part 12: Making PRs against this project.
 
 
+## Git Branches.
 
+  - Part 1 branch link
+  - Part 2 branch link
+  - Part 3 branch link
+  - Part 4 branch link
+  - Part 5 branch link
+  - Part 6 branch link
+  - Part 7 branch link
+  - Part 8 branch link
+  - Part 9 branch link
+
+
+# Below this is generated from "Start React App"
 
 ## Table of Contents
 
