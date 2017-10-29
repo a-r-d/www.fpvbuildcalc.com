@@ -13,31 +13,33 @@ please feel free to make a pull request to update product information or anythin
 
 Here are the videos that correspond to this videos
 
- - Part 1: Project setup
- - Part 2: Building basic components
- - Part 3: Flexbox and component rendering
- - Part 4: Adding the shopping list component
- - Part 5: Adding Redux Actions and Reducers
- - Part 6: Adding Redux Store and wiring the connected component
- - Part 7: Adding another Redux action to remove shopping list items
- - Part 8: Adding detail view to products
- - Part 9: Breaking out the app into pages.
- - Part 10: Analytics, Discuss, and other third party integrations
- - Part 11: Deploying the code.
- - Part 12: Making PRs against this project.
+ - [Part 1: React Redux tutorial - create react app project setup](https://youtu.be/--7LLA_yOAI)
+ - [Part 2: React Redux tutorial - Building basic components](https://youtu.be/zntZaXaOpyY)
+ - [Part 3: React Redux tutorial - Flexbox and component rendering](https://youtu.be/KoYoAp3GSnU)
+ - [Part 4: React Redux tutorial - building the shopping list component]()
+ - [Part 5: React Redux tutorial - Adding Redux Actions and Reducers]()
+ - [Part 6: React Redux tutorial - Adding Redux Store and wiring the connected component]()
+ - [Part 7: React Redux tutorial - Adding another Redux action to remove shopping list items]()
+ - [Part 8: React Redux tutorial - detail view to products]()
+ - [Part 9: React Redux tutorial - routing and pages]()
+ - [Part 10: React Redux tutorial - deploying to S3 bucket]()
 
+Video tags:
+react, redux, react redux, react tutorial, material ui, redux tutorial, create react app
 
 ## Git Branches.
 
-  - Part 1 branch link
-  - Part 2 branch link
-  - Part 3 branch link
-  - Part 4 branch link
-  - Part 5 branch link
-  - Part 6 branch link
-  - Part 7 branch link
-  - Part 8 branch link
-  - Part 9 branch link
+  - [Part 1 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-1)
+  - [Part 2 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-2)
+  - [Part 3 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-3)
+  - [Part 4 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-4)
+  - [Part 5 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-5)
+  - [Part 6 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-6)
+  - [Part 7 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-7)
+  - [Part 8 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-8)
+  - [Part 9 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-9)
+  - [Part 10 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-10)
+
 
 ## Shrinking images
 
