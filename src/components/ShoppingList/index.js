@@ -44,7 +44,6 @@ const ShoppingList = (props) => {
           className="TableComponent"
           onCellClick={(row, col) => {
             if(col === -1) {
-              console.log("A checkbox was clicked for row", row, props);
               props.onProductDeselect(props.products[ row ])
             }
           }}>
