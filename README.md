@@ -13,16 +13,18 @@ please feel free to make a pull request to update product information or anythin
 
 Here are the videos that correspond to this videos
 
+[Playlist link to all of the videos](https://www.youtube.com/playlist?list=PLWRvoIK5KFymTrMa7mzvxuxl5ei_MyeF7)
+
  - [Part 1: React Redux tutorial - create react app project setup](https://youtu.be/--7LLA_yOAI)
  - [Part 2: React Redux tutorial - Building basic components](https://youtu.be/zntZaXaOpyY)
  - [Part 3: React Redux tutorial - Flexbox and component rendering](https://youtu.be/KoYoAp3GSnU)
- - [Part 4: React Redux tutorial - building the shopping list component]()
- - [Part 5: React Redux tutorial - Adding Redux Actions and Reducers]()
- - [Part 6: React Redux tutorial - Adding Redux Store and wiring the connected component]()
- - [Part 7: React Redux tutorial - Adding another Redux action to remove shopping list items]()
- - [Part 8: React Redux tutorial - detail view to products]()
- - [Part 9: React Redux tutorial - routing and pages]()
- - [Part 10: React Redux tutorial - deploying to S3 bucket]()
+ - [Part 4: React Redux tutorial - building the shopping list component](https://youtu.be/N4vg-qlrepo)
+ - [Part 5: React Redux tutorial - Adding Redux Actions and Reducers](https://youtu.be/vrwoDg3GbkY)
+ - [Part 6: React Redux tutorial - Redux Store and connected component](https://youtu.be/Xbbr0uOxKLY)
+ - [Part 7: React Redux tutorial - Redux action to remove shopping list items](https://youtu.be/g_-b-E8ZM98)
+ - [Part 8: React Redux tutorial - tooltip and detail view to products](https://youtu.be/EO1kFhuw01Y)
+ - [Part 9: React Redux tutorial - routing and pages with react router dom](https://youtu.be/0EjgKL52_8o)
+ - [Part 10: React Redux tutorial - deploying to S3 bucket](https://youtu.be/viEf5XBB0fw)
 
 Video tags:
 react, redux, react redux, react tutorial, material ui, redux tutorial, create react app
