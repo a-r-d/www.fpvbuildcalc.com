@@ -24,7 +24,7 @@ const ToolTips = () => {
     </ReactTooltip>
     <ReactTooltip id="SpeedControllersToolTip" type="dark" effect="solid" >
       <p>
-        All of these are BLHeli_S ESCs from 20A to 30A which will be perfect for miniquad racing
+        All of these are BLHeli_S ESCs (unless noted) from 20A to 35A which will be perfect for miniquad racing
         or freestyle. All of the ESC prices listed are for 4 total. One big choice to make with ESCS is to whether get
         a 4-in-1 board or single escs.
       </p>

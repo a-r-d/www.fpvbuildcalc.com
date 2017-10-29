@@ -1,6 +1,6 @@
 // https://www.banggood.com/Racerstar-RS20Ax4-20A-4-in-1-Blheli_S-Opto-ESC-2-4S-Support-Oneshot42-Multishot-for-FPV-Racer-p-1068210.html
 export default {
-  name: 'Racerstar RS20Ax4 20A 4 in 1 Blheli_S',
+  name: 'Racerstar RS20Ax4 20A 4 in 1',
   price: 24.99,
   image: 'images/racerstar-20a-esc.jpg',
   shop: {

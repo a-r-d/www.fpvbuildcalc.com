@@ -1,6 +1,6 @@
 // Racerstar RS30A V2 30A Blheli_S
 export default {
-  name: 'Racerstar RS30A V2 30A Blheli_S',
+  name: 'Racerstar RS30A V2 30A',
   price: 12.99 * 4,
   image: 'images/racerstar-30a-v2.jpg',
   shop: {

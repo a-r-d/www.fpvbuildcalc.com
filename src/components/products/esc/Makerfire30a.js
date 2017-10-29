@@ -1,6 +1,6 @@
 // Makerfire 4pcs BLHeli_S 30A ES
 export default {
-  name: 'Makerfire 4pcs BLHeli_S 30A',
+  name: 'Makerfire 4pcs 30A',
   price: 44.49,
   image: 'images/makerfire-30a.jpg',
   shop: {
