@@ -25,6 +25,7 @@ Here are the videos that correspond to this videos
  - [Part 8: React Redux tutorial - tooltip and detail view to products](https://youtu.be/EO1kFhuw01Y)
  - [Part 9: React Redux tutorial - routing and pages with react router dom](https://youtu.be/0EjgKL52_8o)
  - [Part 10: React Redux tutorial - deploying to S3 bucket](https://youtu.be/viEf5XBB0fw)
+ - [Part 11: React Redux tutorial - redux action to select multiple products](https://youtu.be/wOG_fYAuEgE)
 
 Video tags:
 react, redux, react redux, react tutorial, material ui, redux tutorial, create react app
@@ -41,6 +42,7 @@ react, redux, react redux, react tutorial, material ui, redux tutorial, create r
   - [Part 8 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-8)
   - [Part 9 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-9)
   - [Part 10 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-10)
+  - [Part 11 branch link](https://github.com/a-r-d/www.fpvbuildcalc.com/tree/part-11)
 
 
 ## Shrinking images
