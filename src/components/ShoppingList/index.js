@@ -12,6 +12,7 @@ import {
 import ReactTooltip from 'react-tooltip'
 import FontIcon from 'material-ui/FontIcon';
 import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
 
 
 import './index.css'
@@ -92,7 +93,15 @@ const ShoppingList = (props) => {
         }
         </CardText>
         <CardActions>
-
+          {
+            props.products.length > 0 ?
+              <RaisedButton
+                label="Remove All Items" style={{
+                  margin: 12,
+                }}
+                onClick={() => props.removeAllItems()} />
+                : null
+          }
         </CardActions>
       </Card>
 

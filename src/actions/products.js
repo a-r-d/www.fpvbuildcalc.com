@@ -14,4 +14,22 @@ function productDeSelected(product) {
   }
 }
 
-export default { productSelected, productDeSelected }
+function selectPreset(name) {
+  return {
+    type: types.PRODUCT_PRESET,
+    name: name
+  }
+}
+
+function removeAllItems() {
+  return {
+    type: types.PRODUCT_REMOVE_ALL
+  }
+}
+
+export default {
+  productSelected,
+  productDeSelected,
+  selectPreset,
+  removeAllItems
+}

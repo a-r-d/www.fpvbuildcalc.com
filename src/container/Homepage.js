@@ -5,25 +5,46 @@ import productActions from '../actions/products'
 import './Homepage.css';
 import ProductGrid from '../components/ProductGrid'
 import ShoppingList from '../components/ShoppingList'
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const style = {
+  margin: 12,
+};
 
 class Homepage extends Component {
   render() {
     return (
       <div>
-        <div>
-
-        </div>
         <div className="HomepageContainer">
-            <div className="ProductsContainer">
-              <ProductGrid
-                products={this.props.products}
-                onProductSelect={this.props.onProductSelect}
-                onProductDeselect={this.props.onProductDeselect}
+          <div className="ProductsContainer">
+            <div>
+              <Paper zDepth={1} style={{padding: '0em', marginRight: '1em'}}>
+                <span>Presets: </span>
+                <RaisedButton
+                  label='UAVFutures "$100" build' primary={true} style={style}
+                  onClick={() => this.props.selectPreset('uav_futures_100')} />
+                <RaisedButton
+                  label="30 Amp Alien Build" primary={true} style={style}
+                  onClick={() => this.props.selectPreset('30a_alien')}/>
+                <RaisedButton
+                  label="Cheap 30 Amp Build" primary={true} style={style}
+                  onClick={() => this.props.selectPreset('30a_cheapo')}/>
+              </Paper>
+            </div>
+            <ProductGrid
+              products={this.props.products}
+              onProductSelect={this.props.onProductSelect}
+              onProductDeselect={this.props.onProductDeselect}
+            />
+          </div>
+          <div className="ShoppingListContainer">
+            <ShoppingList
+              products={this.props.products}
+              onProductDeselect={this.props.onProductDeselect}
+              removeAllItems={this.props.removeAllItems}
               />
-            </div>
-            <div className="ShoppingListContainer">
-              <ShoppingList products={this.props.products} onProductDeselect={this.props.onProductDeselect} />
-            </div>
+          </div>
         </div>
       </div>
     );
@@ -43,6 +64,12 @@ const mapDispatchToProps = dispatch => {
     },
     onProductDeselect: (product) => {
       dispatch(productActions.productDeSelected(product))
+    },
+    selectPreset: (name) => {
+      dispatch(productActions.selectPreset(name))
+    },
+    removeAllItems: () => {
+      dispatch(productActions.removeAllItems())
     }
   }
 }

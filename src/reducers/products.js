@@ -1,7 +1,69 @@
 import types from '../actions/types'
 
+import Frames from '../components/products/frames'
+import Fcs from '../components/products/fcs'
+import Motors from '../components/products/motors'
+import Esc from '../components/products/esc'
+import Cams from '../components/products/camera'
+import Vtx from '../components/products/vtx'
+import Props from '../components/products/props'
+import Pdb from '../components/products/pdb'
+import Antenna from '../components/products/antenna'
+import Receiver from '../components/products/receiver'
+
 const initialState = {
   products: []
+}
+
+const presetMasterList = {
+  'uav_futures_100': [
+    'Lisam LS-210',
+    'SP Racing F3',
+    '4X Racerstar 2205 2300KV',
+    'Racerstar RS20Ax4 20A 4 in 1',
+    "600TVL 2.8mm Lens 1/3\" Super Had II CCD",
+    "Eachine TX526 5.8G 40CH 25MW/200MW/600MW",
+    "Realacc 5.8G 5dBi Pagoda",
+    "Flysky 2.4G 6CH FS-iA6B",
+    "Matek Systems PDB-XT60"
+  ],
+  '30a_alien': [
+    'ImpluseRC Alien',
+    'SP Racing F3 with OSD',
+    'Hypetrain 2306 2450kv Motor',
+    'Speedix ES30A HV',
+    "RunCam Swift 2 1/3 CCD 600TVL",
+    "Eachine TX526 5.8G 40CH 25MW/200MW/600MW",
+    "Realacc 5.8G 5dBi Pagoda",
+    "FrSky XSR 2.4GHz 16CH"
+  ],
+  '30a_cheapo': [
+    'Martian II 220',
+    'SP Racing F3',
+    'Emax RS2205S 2600KV',
+    'Makerfire 4pcs 30A',
+    "RunCam Swift 2 1/3 CCD 600TVL",
+    "Eachine TX526 5.8G 40CH 25MW/200MW/600MW",
+    "Realacc 5.8G 5dBi Pagoda",
+    "FrSky XSR 2.4GHz 16CH"
+  ]
+}
+
+const allProducts = [Frames, Fcs, Motors, Esc, Cams, Vtx, Props, Pdb, Antenna, Receiver]
+
+function selectForPreset(presetName) {
+  const productList = presetMasterList[ presetName ]
+  const productsSelected = []
+  allProducts.forEach((productType) => {
+    Object.keys(productType).forEach((productKey) => {
+      const product = productType[ productKey ]
+      if(productList.indexOf(product.name) !== -1) {
+        productsSelected.push(product)
+      }
+    })
+  })
+
+  return productsSelected
 }
 
 function productsReducer(state, action) {
@@ -22,6 +84,13 @@ function productsReducer(state, action) {
       return Object.assign({}, state, {
         products
       })
+    case types.PRODUCT_PRESET:
+      const selected = selectForPreset(action.name)
+      return Object.assign({}, state, {
+        products: selected
+      })
+    case types.PRODUCT_REMOVE_ALL:
+      return Object.assign({}, state, { products: [] })
     default:
       return state
   }
