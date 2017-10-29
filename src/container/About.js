@@ -13,7 +13,7 @@ const About = () => {
           <p>
             I created this site as part of a set of tutorial videos on React. But,
             I would like for it to be an actual useful tool for people in FPV community. However if you
-            want to learn react and <a target="_blank" href='https://www.youtube.com/playlist?list=PLWRvoIK5KFymTrMa7mzvxuxl5ei_MyeF7'>
+            want to learn react and <a target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/playlist?list=PLWRvoIK5KFymTrMa7mzvxuxl5ei_MyeF7'>
             see exactly how I built and deployed this you can check the playlist out
             here.</a>
           </p>
