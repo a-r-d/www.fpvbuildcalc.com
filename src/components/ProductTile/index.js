@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper'
 import Checkbox from 'material-ui/Checkbox';
 import Dialog from 'material-ui/Dialog';
-// import Chip from 'material-ui/Chip';
+import Chip from 'material-ui/Chip';
 
 import './index.css'
 
@@ -76,6 +76,11 @@ class ProductTile extends React.Component{
               open={this.state.open}
               onRequestClose={this.handleClose}
             >
+            {
+              this.props.product.clone ?
+                <Chip backgroundColor="yellow">(This is a clone!)</Chip>
+                : null
+            }
               <p>{ this.props.product.notes }</p>
               <div className="CenterImage">
                 <a href={this.getProductLinks()[0].url} target="_blank" className="ProductLink">
@@ -85,7 +90,10 @@ class ProductTile extends React.Component{
                   />
                 </a>
               </div>
-              <h3>Shopping Links</h3>
+              <div className="ShoppingLinksContainer">
+                <h3>Shopping Links
+                </h3>
+              </div>
               {
                 this.renderProductLinks()
               }

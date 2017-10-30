@@ -49,3 +49,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.ShoppingLinksContainer * {
+  display: inline-block;
+}

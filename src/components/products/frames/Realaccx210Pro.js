@@ -6,5 +6,6 @@ export default {
   },
   image: 'images/realacc-x210-pro.jpg',
   price: 32.00,
-  highp: 60.00
+  highp: 60.00,
+  clone: true
 }

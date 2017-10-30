@@ -12,6 +12,15 @@ const style = {
   margin: 12,
 };
 
+const calcTotal = (props) => {
+  if(!props.products || props.products.length === 0) return "0.00"
+  return props.products.map((product, i) => {
+    return product.price
+  }).reduce((a, b) => {
+    return a + b
+  }).toFixed(2)
+}
+
 class Homepage extends Component {
   render() {
     return (
@@ -33,6 +42,7 @@ class Homepage extends Component {
                 <RaisedButton
                   label="Liftoff Obsession Build" primary={true} style={style}
                   onClick={() => this.props.selectPreset('liftoff_obsession')}/>
+                  Total: $ {calcTotal(this.props)}
               </Paper>
             </div>
             <ProductGrid

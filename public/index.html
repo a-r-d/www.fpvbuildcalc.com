@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta id="vp" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="FPV Build Calculator helps you estimate the build cost of a miniquad"/>
     <!--
@@ -22,6 +22,14 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>FPV Build Calculator - build a miniquad!</title>
+    <script>
+      window.onload = function() {
+          if (window.innerWidth < 900 ) {
+              var mvp = document.getElementById('vp');
+              mvp.setAttribute('content','width=900');
+          }
+      }
+      </script>
   </head>
   <body>
     <noscript>

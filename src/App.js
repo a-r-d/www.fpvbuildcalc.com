@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="App" style={{minWidth: "900px"}}>
           <header className="App-header">
             <Toolbar style={{height: '7em', backgroundColor: '#222'}}>
               <ToolbarGroup firstChild={true}>

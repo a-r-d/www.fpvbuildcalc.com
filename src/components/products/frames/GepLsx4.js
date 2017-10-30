@@ -7,5 +7,6 @@ export default {
   image: 'images/geprc-gep-lsx4.jpg',
   price: 49.99,
   currency: 'USD',
+  clone: true,
   notes: 'Basically a knockoff of the obsession frame.'
 }

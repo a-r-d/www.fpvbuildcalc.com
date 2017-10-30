@@ -6,5 +6,6 @@ export default {
   },
   image: 'images/lisam-210.jpg',
   price: 14.99,
+  clone: true,
   notes: 'Legs are attached to body. Does not come with PDB. Very similar to the Lumenier Charpu edition.'
 }
