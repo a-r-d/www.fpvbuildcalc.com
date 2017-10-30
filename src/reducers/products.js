@@ -46,6 +46,18 @@ const presetMasterList = {
     "Eachine TX526 5.8G 40CH 25MW/200MW/600MW",
     "Realacc 5.8G 5dBi Pagoda",
     "FrSky XSR 2.4GHz 16CH"
+  ],
+  'liftoff_obsession': [
+    'DQuad Obsession V2 210',
+    'Hypetrain 2306 2450kv Motor',
+    'Speedix ES30A HV',
+    'Betaflight Omnibus F3 Pro with OSD',
+    "RunCam Swift 2 1/3 CCD 600TVL",
+    "ImmersionRC 600MW 5.8 GHz",
+    "Realacc 5.8G 5dBi Pagoda",
+    "FrSky XSR 2.4GHz 16CH",
+    "XSoul Tri-Blades 5040 Propeller",
+    "Matek Systems PDB-XT60"
   ]
 }
 

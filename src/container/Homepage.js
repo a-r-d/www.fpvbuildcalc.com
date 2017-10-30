@@ -30,6 +30,9 @@ class Homepage extends Component {
                 <RaisedButton
                   label="Cheap 30 Amp Build" primary={true} style={style}
                   onClick={() => this.props.selectPreset('30a_cheapo')}/>
+                <RaisedButton
+                  label="Liftoff Obsession Build" primary={true} style={style}
+                  onClick={() => this.props.selectPreset('liftoff_obsession')}/>
               </Paper>
             </div>
             <ProductGrid

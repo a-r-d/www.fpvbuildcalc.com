@@ -5,6 +5,7 @@ import DQuadObsession from './DQuadObsession'
 import GepLsx4 from './GepLsx4'
 import ImpulseRcAlien from './ImpulseRcAlien'
 import LisamLS210 from './LisamLS210'
+import RealaccReal1 from './RealaccReal1'
 
 export default {
   LumenierCharpu,
@@ -13,5 +14,6 @@ export default {
   DQuadObsession,
   GepLsx4,
   ImpulseRcAlien,
-  LisamLS210
+  LisamLS210,
+  RealaccReal1
 }
