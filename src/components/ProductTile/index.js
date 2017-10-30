@@ -30,7 +30,11 @@ class ProductTile extends React.Component{
     return Object.keys(this.props.product.shop).map((key, i) => {
       let url = this.props.product.shop[ key ]
       if(String(key) === 'banggood') url += '?p=H101138294533201701A'
-      if(String(key) === 'piroflip' || String(key) === 'getfpv') url += '?s=fpvbuildcalc'
+      if(String(key) === 'piroflip' ||
+        String(key) === 'getfpv' ||
+        String(key) === 'impulserc') {
+          url += '?s=fpvbuildcalc'
+        } 
       return { name: key, url }
     })
   }

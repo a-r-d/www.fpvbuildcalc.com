@@ -5,6 +5,7 @@ import LumenierSkitzo from './LumenierSkitzo'
 import HypeTrain2306 from './HypeTrain2306'
 import Hyperlite2206 from './Hyperlite2206'
 import Racerstar2205 from './Racerstar2205'
+import MrSteeleSilk from './MrSteeleSilk'
 
 export default {
   CrazeponyEmax2300,
@@ -13,5 +14,6 @@ export default {
   LumenierSkitzo,
   HypeTrain2306,
   Hyperlite2206,
-  Racerstar2205
+  Racerstar2205,
+  MrSteeleSilk
 }

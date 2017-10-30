@@ -5,6 +5,7 @@ import Racerstar30aV2 from './Racerstar30aV2'
 import DysXsd20a from './DysXsd20a'
 import SpeedixHV30a from './SpeedixHV30a'
 import Lumenier35a41Opto from './Lumenier35a41Opto'
+import FlyduinoKISS from './FlyduinoKISS'
 
 export default {
   Makerfire20a,
@@ -13,5 +14,6 @@ export default {
   Racerstar30aV2,
   DysXsd20a,
   SpeedixHV30a,
-  Lumenier35a41Opto
+  Lumenier35a41Opto,
+  FlyduinoKISS
 }

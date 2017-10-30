@@ -34,8 +34,8 @@ class Homepage extends Component {
                   label='UAVFutures "$100" build' primary={true} style={style}
                   onClick={() => this.props.selectPreset('uav_futures_100')} />
                 <RaisedButton
-                  label="30 Amp Alien Build" primary={true} style={style}
-                  onClick={() => this.props.selectPreset('30a_alien')}/>
+                  label="Mr. Steele Alien" primary={true} style={style}
+                  onClick={() => this.props.selectPreset('mr_steele_alien')}/>
                 <RaisedButton
                   label="Cheap 30 Amp Build" primary={true} style={style}
                   onClick={() => this.props.selectPreset('30a_cheapo')}/>

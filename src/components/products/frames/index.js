@@ -7,6 +7,7 @@ import ImpulseRcAlien from './ImpulseRcAlien'
 import LisamLS210 from './LisamLS210'
 import RealaccReal1 from './RealaccReal1'
 import Chameleon5 from './Chameleon5'
+import MrSteelAlien from './MrSteelAlien'
 
 export default {
   LumenierCharpu,
@@ -14,8 +15,9 @@ export default {
   Realaccx210Pro,
   DQuadObsession,
   GepLsx4,
-  ImpulseRcAlien,
+  //ImpulseRcAlien,
   LisamLS210,
   RealaccReal1,
-  Chameleon5
+  Chameleon5,
+  MrSteelAlien
 }

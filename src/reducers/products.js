@@ -58,6 +58,17 @@ const presetMasterList = {
     "FrSky XSR 2.4GHz 16CH",
     "XSoul Tri-Blades 5040 Propeller",
     "Matek Systems PDB-XT60"
+  ],
+  'mr_steele_alien': [
+    "MR STEELE EDITION 5\" ALIEN FRAME",
+    "Flyduino KISS",
+    "Flyduino - KISS ESC 2-5S 24A",
+    "TBS MR STEELE 2345KV SILK",
+    "RunCam Swift2 Rotor Riot",
+    "Team BlackSheep TBS UNIFY PRO 800 mw",
+    "Team BlackSheep TBS TRIUMPH",
+    "HQ Prop DP 5x4.3x3 V1S Tri-Blade",
+    "FrSky X4RSB 3/16 Channel"
   ]
 }
 
