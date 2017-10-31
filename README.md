@@ -49,7 +49,12 @@ react, redux, react redux, react tutorial, material ui, redux tutorial, create r
 
 Images should be shrunk with imagemagick:
 ```
+// compress
+mogrify -quality "85%" -filter Lanczos -interlace Plane -gaussian-blur 0.02 *.jpg
+
+// resize as needed
 mogrify -resize 50% *.jpg
+
 ```
 
 # Below this is generated from "Start React App"

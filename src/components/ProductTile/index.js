@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper'
 import Checkbox from 'material-ui/Checkbox';
 import Dialog from 'material-ui/Dialog';
 import Chip from 'material-ui/Chip';
+import imgMap from '../../config/img-map'
 
 import './index.css'
 
@@ -20,6 +21,24 @@ class ProductTile extends React.Component{
     this.setState({open: false});
   };
 
+  imageRefToSheetPosition(imgSrc) {
+    const imgId = 'public/' + imgSrc
+    const imgInfo = imgMap.filter((img) => {
+      return img.src === imgId;
+    })[0]
+    return imgInfo
+  }
+
+  getProductImageStyle(product) {
+    const imgInfo = this.imageRefToSheetPosition(product.image)
+    return {
+      backgroundImage: 'url("img/all-combined-50.png")',
+      backgroundPosition: `-${imgInfo.x}px 0px`,
+      width: '50px',
+      height: '50px',
+    }
+  }
+
   thisProductChecked = () => {
     return this.props.allProducts.findIndex((product) => {
       return this.props.product.name === product.name
@@ -34,7 +53,7 @@ class ProductTile extends React.Component{
         String(key) === 'getfpv' ||
         String(key) === 'impulserc') {
           url += '?s=fpvbuildcalc'
-        } 
+        }
       return { name: key, url }
     })
   }
@@ -69,10 +88,7 @@ class ProductTile extends React.Component{
               }}/>
             </div>
             <a onClick={this.handleOpen} style={{ cursor: 'pointer'}}>
-              <img className='ProductImage'
-                src={this.props.product.image}
-                alt={this.props.product.name}
-              />
+              <div className="ProductImage" style={this.getProductImageStyle(this.props.product)}></div>
             </a>
             <Dialog
               title={ this.props.product.name }
