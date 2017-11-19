@@ -1,0 +1,36 @@
+.BuildGuideContainer {
+
+}
+
+.BuildGuideMainSection, .BGRow {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  margin: 1em;
+  align-content: stretch;
+}
+
+.BGRow > div {
+  margin: 1em;
+}
+
+.BuildGuideImage {
+  margin: 1em;
+  flex-wrap: wrap;
+}
+
+.BuildGuideText {
+  margin: 1em;
+  flex-wrap: wrap;
+}
+
+.BGProductCards > div {
+  margin: 0.5em;
+}
+
+@media (max-width: 400px) {
+  .BuildGuideMainSection, .BGRow {
+    display: block;
+  }
+}

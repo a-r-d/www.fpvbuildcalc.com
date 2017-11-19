@@ -10,6 +10,7 @@ import {Toolbar, ToolbarGroup, ToolbarSeparator} from 'material-ui/Toolbar';
 import Homepage from './container/Homepage'
 import About from './container/About'
 import Disqus from './components/lib/disqus'
+import BuildGuide from './container/BuildGuide'
 
 import './App.css';
 
@@ -29,12 +30,16 @@ class App extends Component {
                 <Link className='HeaderLink' to="/">Home</Link>
                 <ToolbarSeparator style={{margin: '1em'}} />
                 <Link className='HeaderLink' to="/about">About</Link>
+                <ToolbarSeparator style={{margin: '1em'}} />
+                <Link className='HeaderLink' to="/fpv-quadcopter-build-guide">Quadcopter Build Guide</Link>
               </ToolbarGroup>
             </Toolbar>
           </header>
           <div className="MainContentContainer">
             <Route exact path="/" component={Homepage}/>
             <Route path="/about" component={About}/>
+            <Route path="/fpv-quadcopter-build-guide" component={BuildGuide}/>
+            
           </div>
           <footer>
             <Disqus />
