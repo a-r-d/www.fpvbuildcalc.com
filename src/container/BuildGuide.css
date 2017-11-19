@@ -1,5 +1,5 @@
 .BuildGuideContainer {
-
+  font-size: 120%;
 }
 
 .BuildGuideMainSection, .BGRow {
@@ -7,7 +7,7 @@
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  margin: 1em;
+  margin: 1rem;
   align-content: stretch;
 }
 
@@ -15,22 +15,38 @@
   margin: 1em;
 }
 
+.BGDescriptionRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.BGDescriptionRow > div {
+  margin: 0.5rem;
+}
+
 .BuildGuideImage {
-  margin: 1em;
+  margin: 1rem;
   flex-wrap: wrap;
 }
 
 .BuildGuideText {
-  margin: 1em;
+  margin: 1rem;
   flex-wrap: wrap;
 }
 
 .BGProductCards > div {
-  margin: 0.5em;
+}
+
+.BGProductCards p {
+  font-size: 1rem !important;
 }
 
 @media (max-width: 400px) {
   .BuildGuideMainSection, .BGRow {
+    display: block;
+  }
+
+  .BGDescriptionRow {
     display: block;
   }
 }
