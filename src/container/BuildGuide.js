@@ -128,7 +128,8 @@ const BuildGuide = () => {
                   lot of stuff, right? Well, you would be correct.{" "}
                   <strong>
                     Normally it takes about $1000 worth of gear to get into this
-                    hobby in a meaningful way with good quality gear.
+                    hobby in a meaningful way with good quality gear and enough
+                    batteries for things to be fun.
                   </strong>{" "}
                   You can go a bit cheaper too but eventually you will want to
                   start upgrading things, so the argument can be made for just
@@ -157,9 +158,9 @@ const BuildGuide = () => {
                     two categories: those that are very lightweight and geared
                     towards racing, and those that are boxy and robust and
                     geared toward freestyle (along with variations in between).
-                    If you are a beginer it is best to go with a frame style
-                    similar to Alien / Martian that is boxy and sturdy in the
-                    event of a hard crash.
+                    If you are a beginner it could be argued that you should go
+                    with a frame style similar to Alien / Martian that is boxy
+                    and sturdy in the event of a hard crash.
                   </p>
                   <p>
                     Some frames like the{" "}
@@ -167,8 +168,9 @@ const BuildGuide = () => {
                       Armattan Chameleon{" "}
                     </a>{" "}
                     offer a warranty, and excellent support from the
-                    manufacturer. Other frames are little more than cheap
-                    chineese knockoffs.
+                    manufacturer. Also, be careful to consider if you are buying
+                    an original frame design or a clone (clones are common on
+                    Banggood).
                   </p>
                 </CardText>
               </Card>
@@ -212,7 +214,9 @@ const BuildGuide = () => {
                   </p>
                   <p>
                     Right now, you want to either go with BLHeli_S or KISS speed
-                    controllers.
+                    controllers. Almost any BLHeli_S speed controller will be
+                    compatible with a flight controller running Cleanflight or
+                    Betaflight firmware.
                   </p>
                 </CardText>
               </Card>
@@ -237,17 +241,21 @@ const BuildGuide = () => {
                   </p>
                   <p>
                     What are some good things to look for in a flight
-                    controller? Well, you want to make sure you have enough
-                    interfaces to hook up to all of your components. This means
-                    the number of UARTS (hardware serial ports that allow you to
-                    connect external devices).
+                    controller? Currently you want to get a flight controller
+                    running Cleanflight or Betaflight firmware, which you should
+                    pair with BLHeli_S ESCs. Another good alternative is a KISS
+                    flight controller, which you can pair with KISS ESCs. You
+                    also want to make sure you have enough interfaces to hook up
+                    to all of your components. This means the number of UARTS
+                    (hardware serial ports that allow you to connect external
+                    devices).
                   </p>
                   <p>
-                    You also want to consider connector types of the speed
-                    controller / flight controller interface. Will you want to
-                    solder up the speed controllers directly to the flight
-                    controller, or do you want header pins to be able to easily
-                    swap things out?
+                    You should consider connector types of the speed controller
+                    / flight controller interface. Will you want to solder up
+                    the speed controllers directly to the flight controller, or
+                    do you want header pins to be able to easily swap things
+                    out?
                   </p>
                   <p>
                     Do you want a VBat monitor and or alarm on your flight
@@ -303,12 +311,13 @@ const BuildGuide = () => {
                     typically 10x the cost of a receiver module).
                   </p>
                   <p>
-                    FrSky is currently the leader if manufacturing the most high
-                    quality transmitters and receivers for the miniquad market.
-                    FrSky Taranis seems to be the most popular radio that
-                    professional freestylers and racers pick by a long shot.
-                    Many people also believe that the protocols that FrSky uses
-                    are much more robust than FlySky or Spektrum.
+                    According to many FrSky is currently the leader if
+                    manufacturing the most high quality transmitters and
+                    receivers for the miniquad market. FrSky Taranis seems to be
+                    the most popular radio that professional freestylers and
+                    racers pick by a long shot. Many people also believe that
+                    the protocols that FrSky uses are much more robust than
+                    FlySky or Spektrum.
                   </p>
                   <p>
                     The most inexpensive brand is FlySky, which has cheap
@@ -317,10 +326,99 @@ const BuildGuide = () => {
                     protocol iBus.
                   </p>
                   <p>
-                    Spektrum is another high quality (and expensive) radio and
-                    the DX8 is a popular choice, however it is less popular than
-                    FrSky Taranis. There appear to be a lot of complains from
-                    users about range and unexpected failsafes.
+                    Spektrum is another high quality radio and the DX8 is a
+                    popular choice, however it is less popular than FrSky
+                    Taranis. The popular Rotor Riot pilot Le Drib uses a
+                    Spektrum DX8.
+                  </p>
+                </CardText>
+              </Card>
+            </div>
+
+            <div className="BGDescriptionRow">
+              <Card style={{ flex: "1 1.5 auto" }}>
+                <CardHeader
+                  title="FPV Camera"
+                  avatar="/images/runcam-rotor-riot.jpg"
+                />
+                <CardText>
+                  <p>
+                    When picking an FPV camera you want to look at a few things. First, you want to get a 
+                    CCD camera (not CMOS) because this is generally a higher quality sensor type. The TVL rating is another 
+                    thing to look at: 600TVL means 600 TV Lines of resolution. Higher is better. Next you want to 
+                    consider light sensitivity, having a camera that works great in low loght is crucial for 
+                    flying in evenings.  Finally consider field of view angle. Do you like to fly with a wide angle or 
+                    a narrow angle? 
+                  </p>
+                  <p>
+                    Right now a great general purpose FPV camera is the Runcam Swift 2. It has excellent image 
+                    quality, great low light support (I have flown with the Swift 2 under and overpass at night and been 
+                    able to see clearly), and even has an OSD with vBat monitoring support. There is even a Rotor Riot version 
+                    of the Runcam Swift 2. The 2.3 mm lens has a nice 150° FOV. 
+                  </p>
+
+                </CardText>
+              </Card>
+
+              <Card style={{ flex: "1 1.5 auto" }}>
+                <CardHeader
+                  title="Video Transmitter (VTX)"
+                  avatar="/images/eachine-vtx.jpg"
+                />
+                <CardText>
+                  <p>
+                    The video transmitter takes the signal from your video
+                    camera and transmits it back to your headset. Video
+                    transmitters have different signal strengths, and the 3 most
+                    commonly seen are 25, 200, and 600 mw. 25 and 200 mw are
+                    meant for using in race situations where many others will be
+                    transmitting. 600mw is meant for outdoor use, the strong
+                    signal can cause interference with other users or in small
+                    confined areas.
+                  </p>
+                  <p>
+                    You probably want to get a VTX that allows you to easily
+                    change the channel and or the signal strength, there many
+                    variants of these that include a button and LCD display for
+                    this purpose.
+                  </p>
+                  <p>
+                    If you want to fly long range you can also pick up a VTX
+                    that will transmit with a strenth of 1200mw
+                  </p>
+                </CardText>
+              </Card>
+
+              <Card style={{ flex: "1 1 auto" }}>
+                <CardHeader
+                  title="Propellers"
+                  avatar="/images/dal-cyclone.jpg"
+                />
+                <CardText>
+                  <p>
+                      Propellers come in many variations too lengthy to describe here in detail.  
+                      But among 5" props for freestyle and racing there are few ways to describe them.
+                  </p>
+                  <p>
+                      <strong>Number of blades.</strong> The more surface area you have on the propeller, 
+                      the more thrust and current draw. So tri-blades are going to be less efficient but 
+                      snappier feeling than bi-blades. 
+                  </p>
+                  <p>
+                      <strong>Pitch Angle.</strong> Higher pitch angle generates more thrust, thus more current draw.
+                      Also, a higher (or steeper) pitch angle will disturb the air a lot more. This can create more prop wash. 
+                  </p>
+                  <p>
+                      <strong>Tip of the props.</strong> Pointy tips or bullnose? Bullnose does confer more surface area so 
+                      it should give more thrust. I have also read that pointy tips direct air out in such a way to create less 
+                      prop wash. I like to fly bullnose though because they are more durable. 
+                  </p>
+                  <p>
+                     What are lot of people flying right now? <a href="http://amzn.to/2iFMuor">HQ V1S - tri blades.</a>. 
+                     A lot of Rotor Riot people seem to fly HQ props. However, as a more inexperienced pilot 
+                     I like to fly stiffer props that break less often. I usually go for&nbsp;
+                     <a href="https://www.banggood.com/2-Pairs-DALPROP-5045-T5045-3-Blade-PC-Propeller-CW-CCW-For-QAV250-ZMR250-240-RC-Multirotors-p-1056195.html?p=H101138294533201701A">bullnose Dal Props, which are 
+                     made from very stiff plastic</a>. 
                   </p>
                 </CardText>
               </Card>
