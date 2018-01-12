@@ -1,21 +1,5 @@
-.AboutContainer {
-
-}
-
 .AboutMainSection {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  margin: 2em;
-}
-
-.AboutImage {
-  margin: 1em;
-  flex-wrap: wrap;
-}
-
-.AboutText {
-  margin: 1em;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 1em;
 }

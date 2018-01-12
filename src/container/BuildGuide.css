@@ -3,12 +3,9 @@
 }
 
 .BuildGuideMainSection, .BGRow {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  margin: 1rem;
-  align-content: stretch;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 1em;
 }
 
 .BGRow > div {

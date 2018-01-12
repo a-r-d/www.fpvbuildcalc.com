@@ -1,17 +1,5 @@
 .ProductGrid {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  flex-flow: row wrap;
-  flex-wrap: wrap;
-}
-
-.ProductGridColumn {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  margin: 0.5em;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 14em);
+  grid-column-gap: 1em;
 }

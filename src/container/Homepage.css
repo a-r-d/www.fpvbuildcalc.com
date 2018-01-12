@@ -1,17 +1,4 @@
-
 .HomepageContainer {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-}
-
-.ProductsContainer {
-  /*flex: 3 0 auto;*/
-  width: 75%;
-}
-
-.ShoppingListContainer {
-  /*flex: 1 0 auto;*/
-  width: 25%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
